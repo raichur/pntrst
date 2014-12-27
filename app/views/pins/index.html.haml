@@ -3,5 +3,8 @@
     .box.panel.panel-default
       = link_to (image_tag pin.image.url), pin
       .panel-body
+        = link_to like_pin_path(pin), method: :put, class: 'btn' do
+          = pin.get_upvotes.size
+          Kudos
         %h2= link_to pin.title, pin
         %p= pin.description

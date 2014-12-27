@@ -5,6 +5,10 @@
 Submitted by
 = @pin.user.email
 
+= link_to like_pin_path(@pin), method: :put, class: 'btn' do
+  = @pin.get_upvotes.size
+  Kudos
 = link_to "Back", root_path
-= link_to "Edit", edit_pin_path
-= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }
+- if user_signed_in?
+  = link_to "Edit", edit_pin_path
+  = link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }

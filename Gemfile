@@ -14,3 +14,4 @@ gem 'simple_form'
 gem 'devise'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "masonry-rails"
+gem "acts_as_votable"
